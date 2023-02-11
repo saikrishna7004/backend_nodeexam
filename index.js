@@ -234,6 +234,10 @@ app.post('/api/test', upload.single('file'), async (req, res) => {
     }
 });
 
+app.post('/api/hello', upload.single('file'), async (req, res) => {
+    res.status(200).json({ message: "Hello" });
+});
+
 app.listen(5000, () => {
     console.log('Server running on port 5000');
 });
